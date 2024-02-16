@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    color-scheme: only light;
+}
+
+
+body{
+    overflow: hidden;
+    cursor: url(img/Skyrim_Chillrend_Sword_Cursor.png) , auto;
+    background: gray;
+    color: white;
+}
+
+*:hover{
+    cursor: url(img/Skyrim_Chillrend_Sword_Cursor.png) , pointer;
+}
+
+.pop-up{
+    position: fixed;
+    margin:1%;
+    width: 95vw;
+    height: 95vh;
+    z-index: 2;
+    background: #000000;
+    filter: blur(5%);
+    color: white;
+    backdrop-filter: blur(100%);
+    align-items: center;
+    text-align: justify;
+    font-size: large;
+    padding: 1.5rem;
+
+}
+
+.pop-up .close{
+    position: relative;
+    top: 3%;
+    left: 95%;
+    width: 2rem;
+    border-radius: 60%;
+    right: 0; 
+    z-index: 1;
+    padding: .5rem;
+}
+
+.pop-up .close:hover{
+    color: red;
+    background-color: #2a2a2a;
+    border: 1px white solid;
+}
+
+.pop-up .play{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 5%;
+    margin: .5rem 44%;
+}
+
+.pop-up .play:hover{
+    color: green;
+    background-color: #2a2a2a;
+    border: 1px white solid;
+}
+
+
+
+.nav
+{
+    top: 0;
+    left: 0;    
+    height: 8rem;
+    width: 100%;
+    display: inline-flex;
+    position: fixed;
+    border-bottom: 1px white solid; 
+    background-color: #2a2a2a;
+}
+
+.pop-up .nav{
+    position: relative;
+    background: transparent;
+}
+
+.nav #logo
+{
+    margin: .5rem;
+    padding: .5rem;
+    margin-left: 2rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 30%;
+}
+
+.nav h1{
+    margin: .5rem;
+    padding: .5rem;
+    align-self: center;
+    font: 2em sans-serif;
+}
+
+
+footer{
+    background-color: rgba(0, 0, 0, 0.658);
+    color: white;
+    font: .8rem sans-serif;
+    position: fixed;
+    overflow: hidden;
+    align-items: right;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: 25%;
+}
+
+footer a, footer i{
+    cursor: poiter;
+    color: white;
+    margin: 0 0.25rem 0 0;
+}
+
+footer a:hover, footer i:hover{
+    color: blue;
+}
+
+@media (max-width: 1080px) and (min-width: 600px) {
+    footer{
+        width: 35%;
+        font: 1rem sans-serif;
+    }     
+}
+
+@media (max-width: 600px) {
+
+    .pop-up .play{
+        margin: .5rem 38%;
+    }
+    
+    
+.nav
+{   
+    height: 5rem;
+    width: 100%;
+}
+
+.nav #logo
+{
+    margin: .5rem;
+    padding: .5rem;
+    margin-left: 2rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 30%;
+}
+
+.nav h1{
+    margin: .5rem;
+    padding: .5rem;
+    align-self: center;
+    font: 1.2em sans-serif;
+}
+
+    footer{
+        width: 40%;
+    }
+    
+}
