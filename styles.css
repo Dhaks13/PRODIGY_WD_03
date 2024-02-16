@@ -11,7 +11,7 @@
 body{
     overflow: hidden;
     cursor: url(img/Skyrim_Chillrend_Sword_Cursor.png) , auto;
-    background: gray;
+    background: #000000;
     color: white;
 }
 
@@ -117,7 +117,7 @@ footer{
 }
 
 footer a, footer i{
-    cursor: poiter;
+    cursor: pointer;
     color: white;
     margin: 0 0.25rem 0 0;
 }
