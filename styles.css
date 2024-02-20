@@ -103,6 +103,64 @@ body{
 }
 
 
+.score {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7rem;
+    font-size: large;
+}
+
+
+.score .X, .score .O {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .2rem;
+    padding: .2rem;
+    border: 1px white solid;
+}
+
+.score img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.game {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+    margin-top: 2rem;
+}
+
+.game div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.reset {
+    position: fixed;
+    padding: 0.5rem 1rem;
+    bottom: 1rem;
+    left: 45%;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 1rem;
+}
+
+.reset:hover {
+    background-color: #4a4a4a;
+}
+
+
 footer{
     background-color: rgba(0, 0, 0, 0.658);
     color: white;
@@ -163,8 +221,15 @@ footer a:hover, footer i:hover{
     font: 1.2em sans-serif;
 }
 
+.score{
+    margin-top: 5rem;
+}
+
     footer{
         width: 40%;
     }
     
+    .reset{
+        left: 40%;
+    }
 }
