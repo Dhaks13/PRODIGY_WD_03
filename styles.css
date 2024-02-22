@@ -108,7 +108,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: large;
 }
 
@@ -120,21 +120,25 @@ body{
     gap: .2rem;
     padding: .2rem;
     border: 1px white solid;
+    width: 5rem;
+    height: 2.5rem;
 }
 
 .score img {
     width: 1rem;
     height: 1rem;
 }
-
+/*
 .game {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    position: fixed;
+    grid-template-rows: repeat(3, );
+    grid-template-columns: repeat(3, 12fr);
     gap: 0.2rem;
-    margin-top: 2rem;
+    margin: 8rem 5rem;
+    padding: 2rem;
 }
-
+*/
 .game div {
     display: flex;
     justify-content: center;
@@ -142,6 +146,11 @@ body{
     font-size: 2rem;
     background-color: #2a2a2a;
     color: white;
+    border: 2px solid white;
+}
+
+.game div:hover {
+    background-color: #4a4a4a;
 }
 
 .reset {
@@ -222,7 +231,18 @@ footer a:hover, footer i:hover{
 }
 
 .score{
-    margin-top: 5rem;
+    margin-top: 4rem;
+    font-size: medium;
+}
+
+.score .X, .score .O {
+    width: 3rem;
+    height: 2rem;
+}
+
+.score img {
+    width: .75rem;
+    height: .75rem;
 }
 
     footer{
