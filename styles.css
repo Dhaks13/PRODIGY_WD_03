@@ -104,11 +104,9 @@ body{
 
 
 .score {
-    position: fixed;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    margin-top: 5.5rem;
+    margin-top: 9rem;
     font-size: large;
 }
 
@@ -128,29 +126,28 @@ body{
     width: 1rem;
     height: 1rem;
 }
-/*
+
 .game {
+    align-self: center;
+    margin: .5rem auto;
     display: grid;
-    position: fixed;
-    grid-template-rows: repeat(3, );
-    grid-template-columns: repeat(3, 12fr);
-    gap: 0.2rem;
-    margin: 8rem 5rem;
-    padding: 2rem;
+    grid-template-columns: repeat(3, 140px); 
+    grid-template-rows: repeat(3, 130px);
+    gap: 10px;
 }
-*/
+
 .game div {
+    background-color: #ffffff; 
+    border-radius: 5px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    background-color: #2a2a2a;
-    color: white;
-    border: 2px solid white;
+    justify-content: center;
+    font-size: 24px; 
+    transition: background-color 0.3s ease; 
 }
 
 .game div:hover {
-    background-color: #4a4a4a;
+    background-color: #767676;
 }
 
 .reset {
@@ -231,7 +228,7 @@ footer a:hover, footer i:hover{
 }
 
 .score{
-    margin-top: 4rem;
+    margin-top: 6rem;
     font-size: medium;
 }
 
@@ -243,6 +240,14 @@ footer a:hover, footer i:hover{
 .score img {
     width: .75rem;
     height: .75rem;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); 
+    grid-template-rows: repeat(3, 100px);
+    gap: 7px;
+    margin: 20px;
 }
 
     footer{
