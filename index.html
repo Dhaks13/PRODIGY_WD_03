@@ -45,28 +45,19 @@
             <h1 class="title">Tic Tac Toe</h1>
         </div>
         <div class="score">
-            <div class="X"><img src="img/X.png"/>:<p id="X">0</p></div>
-            <div class="O"><img src="img/O.png"/>:<p id="O">0</p></div>
+            <div class="X"><img src="img/X.png"/>:<p id="Xwin">0</p></div>
+            <div class="O"><img src="img/O.png"/>:<p id="Owin">0</p></div>
         </div>
-        <div class="game">
-            <div class="r1c1">
-            </div>
-            <div class="r1c2">
-            </div>
-            <div class="r1c3">
-            </div>
-            <div class="r2c1">
-            </div>
-            <div class="r2c2">
-            </div>
-            <div class="r2c3">
-            </div>
-            <div class="r3c1">
-            </div>
-            <div class="r3c2">
-            </div>
-            <div class="r3c3">
-            </div>
+        <div id="app" class="game">
+            <div class="cell" onclick="placeSymbol(0, 0)"></div>
+            <div class="cell" onclick="placeSymbol(0, 1)"></div>
+            <div class="cell" onclick="placeSymbol(0, 2)"></div>
+            <div class="cell" onclick="placeSymbol(1, 0)"></div>
+            <div class="cell" onclick="placeSymbol(1, 1)"></div>
+            <div class="cell" onclick="placeSymbol(1, 2)"></div>
+            <div class="cell" onclick="placeSymbol(2, 0)"></div>
+            <div class="cell" onclick="placeSymbol(2, 1)"></div>
+            <div class="cell" onclick="placeSymbol(2, 2)"></div>
         </div>
         <button class="reset" onclick="reset()">Reset</button>
         <footer>

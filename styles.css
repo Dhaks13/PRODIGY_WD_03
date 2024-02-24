@@ -21,7 +21,7 @@ body{
 
 .pop-up{
     position: fixed;
-    margin:1%;
+    margin: -5.5rem .1rem;
     width: 95vw;
     height: 95vh;
     z-index: 2;
@@ -129,10 +129,10 @@ body{
 
 .game {
     align-self: center;
-    margin: .5rem auto;
+    margin: .5rem 35%;
     display: grid;
-    grid-template-columns: repeat(3, 140px); 
-    grid-template-rows: repeat(3, 130px);
+    grid-template-columns: repeat(3, 135px); 
+    grid-template-rows: repeat(3, 135px);
     gap: 10px;
 }
 
@@ -144,6 +144,15 @@ body{
     justify-content: center;
     font-size: 24px; 
     transition: background-color 0.3s ease; 
+}
+
+
+.cell.x {
+    background-image: url('/img/X.png');
+}
+
+.cell.o {
+    background-image: url('/img/O.png');
 }
 
 .game div:hover {
@@ -247,7 +256,7 @@ footer a:hover, footer i:hover{
     grid-template-columns: repeat(3, 100px); 
     grid-template-rows: repeat(3, 100px);
     gap: 7px;
-    margin: 20px;
+    margin: 15% 15%;
 }
 
     footer{

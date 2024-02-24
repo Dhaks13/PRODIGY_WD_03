@@ -1,81 +1,79 @@
-var xwin=0;
-var ywin=0;
+let currentPlayer = 'X';
+let board = [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', '']
+];
 
-window.addEventListener('DOMContentLoaded', () => {
-    initializeGame();
-});
+let xWins = 0;
+let oWins = 0;
 
-
-function initializeGame() {
-    const cells = document.querySelectorAll('.game div');
-
-    cells.forEach(cell => {
-        cell.addEventListener('click', () => {
-            if (!cell.textContent) {
-                const currentPlayer = getCurrentPlayer();
-
-                cell.style.background = `url(${currentPlayer}.png)`;
-
-                cell.textContent = currentPlayer;
-
-                if (checkWinner(currentPlayer)) {
-                    alert(`${currentPlayer} wins!`);
-                    resetGame();
-                } else if (checkDraw()) {
-                    alert('It\'s a draw!');
-                    resetGame();
-                }
-            }
-        });
-    });
+function handleWin(winner) {
+    if (winner === 'X') {
+        xWins++;
+        document.getElementById('Xwin').textContent = xWins; 
+    } else if (winner === 'O') {
+        oWins++;
+        document.getElementById('Owin').textContent = oWins; 
+    }
 }
 
-function getCurrentPlayer() {
-    const xCount = document.querySelectorAll('.game div').length;
-    const oCount = document.querySelectorAll('.game div').length - document.querySelectorAll('.game div').textContent.length;
+function placeSymbol(row, col) {
+    if (!board[row][col]) {
+        board[row][col] = currentPlayer;
+        let cell = document.getElementById('app').children[row * 3 + col];
 
-    return xCount <= oCount ? 'X' : 'O';
+        if (currentPlayer === 'X') {
+            cell.classList.add('x');
+        } else {
+            cell.classList.add('o');
+        }
+        
+        if (checkWinner()) {
+            alert(currentPlayer + ' wins!');
+            handleWin(currentPlayer);
+            resetGame();
+        } else {
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        }
+    }
 }
 
-function checkWinner(player) {
-    const winningCombinations = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9],
-        [1, 4, 7],
-        [2, 5, 8],
-        [3, 6, 9],
-        [1, 5, 9],
-        [3, 5, 7]
-    ];
+function checkWinner() {
+    for (let i = 0; i < 3; i++) {
+        if (board[i][0] && board[i][0] === board[i][1] && board[i][1] === board[i][2]) return true; 
+        if (board[0][i] && board[0][i] === board[1][i] && board[1][i] === board[2][i]) return true; 
+    }
+    if (board[0][0] && board[0][0] === board[1][1] && board[1][1] === board[2][2]) return true; 
+    if (board[0][2] && board[0][2] === board[1][1] && board[1][1] === board[2][0]) return true;
 
-    return winningCombinations.some(combination => {
-        return combination.every(cell => {
-            return document.getElementById(`cell-${cell}`).textContent === player;
-        });
-    });
-}
+    if (board.flat().every(cell => cell)) {
+        alert('It\'s a tie!');
+        resetGame();
+    }
 
-function checkDraw() {
-    const cells = document.querySelectorAll('.game div');
-    return Array.from(cells).every(cell => cell.textContent !== '');
+    return false;
 }
 
 function resetGame() {
-    const cells = document.querySelectorAll('.game div');
-    cells.forEach(cell => {
-        cell.textContent = '';
-        cell.style.background = 'none';
-    });
+    currentPlayer = 'X';
+    board = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+    ];
+
+    document.querySelectorAll('.cell').forEach(cell => cell.classList = ['cell']);
 }
 
-function reset(){
+function reset() {
     resetGame();
-    document.getElementById("X").innerHTML=0;
-    document.getElementById("Y").innerHTML=0;
+    xWins = 0;
+    oWins = 0;
+    document.getElementById('Xwin').textContent = xWins; 
+    document.getElementById('Owin').textContent = oWins; 
 }
 
-
-function popup_close(){
+function popup_close() {
     document.getElementById("pop-up").style.display="none";
 }
