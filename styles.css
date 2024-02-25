@@ -21,7 +21,7 @@ body{
 
 .pop-up{
     position: fixed;
-    margin: -5.5rem .1rem;
+    margin: -5.5rem .75rem;
     width: 95vw;
     height: 95vh;
     z-index: 2;
@@ -206,6 +206,10 @@ footer a:hover, footer i:hover{
 
 @media (max-width: 600px) {
 
+    .pop-up{
+        font-size: medium;
+        margin: -5.5rem .15rem;
+    }
     .pop-up .play{
         margin: .5rem 38%;
     }
@@ -253,15 +257,16 @@ footer a:hover, footer i:hover{
     display: grid;
     grid-template-columns: repeat(3, 100px); 
     grid-template-rows: repeat(3, 100px);
-    gap: 7px;
-    margin: 15% 15%;
+    gap: 5px;
+    margin: 10% 10%;
 }
 
     footer{
-        width: 40%;
+        width: 50%;
     }
     
     .reset{
-        left: 40%;
+        left: 38%;
+        bottom: 20%;
     }
 }
