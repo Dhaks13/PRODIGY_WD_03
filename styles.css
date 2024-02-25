@@ -210,7 +210,8 @@ footer a:hover, footer i:hover{
         width: 98%;
         height: 98%;
         font-size: medium;
-        margin: 0;
+        margin-left: .5%;
+        margin-top: -5rem;
     }
     
     
@@ -254,11 +255,18 @@ footer a:hover, footer i:hover{
 
 .game {
     display: grid;
-    grid-template-columns: repeat(3, 100px); 
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 90px); 
+    grid-template-rows: repeat(3, 90px);
     gap: 5px;
-    margin: 2.5% 6%;
+    margin-top: 3rem;
+    margin-left: 1.5rem;
 }
+
+.cell img {
+    width: 80px;
+    height: 80px;
+}
+
 
     footer{
         width: 50%;
@@ -267,6 +275,6 @@ footer a:hover, footer i:hover{
     .reset{
         font-size: 1rem;
         left: 30%;
-        bottom: 5%;
+        bottom: 15px;
     }
 }

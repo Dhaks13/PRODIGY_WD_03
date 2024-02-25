@@ -38,7 +38,7 @@ function placeSymbol(row, col) {
             } else {
                 currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             }
-        }, 300);
+        }, 100);
     }
 }
 
