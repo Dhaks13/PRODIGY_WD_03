@@ -147,16 +147,14 @@ body{
 }
 
 
-.cell.x {
-    background-image: url('/img/X.png');
-}
-
-.cell.o {
-    background-image: url('/img/O.png');
-}
-
 .game div:hover {
     background-color: #767676;
+}
+
+
+.cell img {
+    width: 100px;
+    height: 100px;
 }
 
 .reset {

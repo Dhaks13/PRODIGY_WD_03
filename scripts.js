@@ -19,23 +19,26 @@ function handleWin(winner) {
 }
 
 function placeSymbol(row, col) {
+    
     if (!board[row][col]) {
         board[row][col] = currentPlayer;
         let cell = document.getElementById('app').children[row * 3 + col];
 
         if (currentPlayer === 'X') {
-            cell.classList.add('x');
+            cell.innerHTML='<img src="img/X.png" alt="X">';
         } else {
-            cell.classList.add('o');
+            cell.innerHTML='<img src="img/O.png" alt="O">';
         }
-        
-        if (checkWinner()) {
-            alert(currentPlayer + ' wins!');
-            handleWin(currentPlayer);
-            resetGame();
-        } else {
-            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        }
+        setTimeout(function() {
+            if (checkWinner()) {
+                alert(currentPlayer + ' wins!');
+                handleWin(currentPlayer);
+                currentPlayer = 'X';
+                resetGame();
+            } else {
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            }
+        }, 300);
     }
 }
 
@@ -49,6 +52,7 @@ function checkWinner() {
 
     if (board.flat().every(cell => cell)) {
         alert('It\'s a tie!');
+        currentPlayer = 'X';
         resetGame();
     }
 
@@ -56,17 +60,17 @@ function checkWinner() {
 }
 
 function resetGame() {
-    currentPlayer = 'X';
     board = [
         ['', '', ''],
         ['', '', ''],
         ['', '', '']
     ];
 
-    document.querySelectorAll('.cell').forEach(cell => cell.classList = ['cell']);
+    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML='');
 }
 
 function reset() {
+    currentPlayer = 'X';
     resetGame();
     xWins = 0;
     oWins = 0;
