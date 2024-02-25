@@ -16,7 +16,7 @@ body{
 }
 
 *:hover{
-    cursor: url(img/Skyrim_Chillrend_Sword_Cursor.png) , pointer;
+    cursor: url(img/Skyrim_Chillrend_Sword_Cursor.png) , auto;
 }
 
 .pop-up{
@@ -209,7 +209,7 @@ footer a:hover, footer i:hover{
     .pop-up{
         width: 98%;
         height: 98%;
-        font-size: medium;
+        font-size: small;
         margin-left: .5%;
         margin-top: -5rem;
     }
@@ -258,8 +258,8 @@ footer a:hover, footer i:hover{
     grid-template-columns: repeat(3, 90px); 
     grid-template-rows: repeat(3, 90px);
     gap: 5px;
-    margin-top: 3rem;
-    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: .5rem;
 }
 
 .cell img {
@@ -275,6 +275,6 @@ footer a:hover, footer i:hover{
     .reset{
         font-size: 1rem;
         left: 30%;
-        bottom: 15px;
+        bottom: 18px;
     }
 }
