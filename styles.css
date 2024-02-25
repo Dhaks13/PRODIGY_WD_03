@@ -160,13 +160,13 @@ body{
 .reset {
     position: fixed;
     padding: 0.5rem 1rem;
-    bottom: 1rem;
+    bottom: 7.5%;
     left: 45%;
     border: none;
     border-radius: 5px;
     background-color: #2a2a2a;
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .reset:hover {
@@ -208,10 +208,6 @@ footer a:hover, footer i:hover{
 
     .pop-up{
         font-size: medium;
-        margin: -5.5rem .15rem;
-    }
-    .pop-up .play{
-        margin: .5rem 38%;
     }
     
     
@@ -255,10 +251,10 @@ footer a:hover, footer i:hover{
 
 .game {
     display: grid;
-    grid-template-columns: repeat(3, 100px); 
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 110px); 
+    grid-template-rows: repeat(3, 110px);
     gap: 5px;
-    margin: 10% 10%;
+    margin: 5% 5%;
 }
 
     footer{
@@ -266,7 +262,8 @@ footer a:hover, footer i:hover{
     }
     
     .reset{
-        left: 38%;
+        font-size: 1rem;
+        left: 30%;
         bottom: 20%;
     }
 }
