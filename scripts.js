@@ -37,6 +37,7 @@ function placeSymbol(row, col) {
                 resetGame();
             } else {
                 currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                document.getElementById("turn").innerHTML = currentPlayer;
             }
         }, 100);
     }
@@ -65,7 +66,7 @@ function resetGame() {
         ['', '', ''],
         ['', '', '']
     ];
-
+    document.getElementById("turn").innerHTML = 'X';
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML='');
 }
 
